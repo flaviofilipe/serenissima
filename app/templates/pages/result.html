@@ -1,0 +1,42 @@
+<div class="col-md-12 col-sm-12">
+<!-- BEGIN BORDERED TABLE PORTLET-->
+<div class="portlet light portlet-fit ">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-globe font-red"></i>
+            <span class="caption-subject font-red sbold uppercase">Resultados</span>
+        </div>
+        <div class="actions">
+            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                <label class="btn grey-salsa btn-sm active">
+                    <input type="radio" name="options" class="toggle" id="option1">Actions</label>
+                </div>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="table-scrollable table-scrollable-borderless">
+            <table class="table">
+                <thead>
+                    <tr class="uppercase">
+                        <th> Site </th>
+                        <th> Descrição </th>
+                        <th> Opções </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for result in context.result_search %}
+                    <tr>
+                        <td width="30%"> <a href="#"> {{ result.link }} </a> </td>
+                        <td> {{result.descricao}} </td>
+                        <td width=10%>
+                            <button type="button" class="btn default">Acessar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- END BORDERED TABLE PORTLET-->
+</div>
